@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Already exists!</h1>
+    <p>{{ object.url }}</p>
+    {% if object.clickevent %}<p>Count: {{ object.clickevent.count }}</p>{% endif %}
+    <p><a href="{{ object.get_short_url }}">{{ object.get_short_url }}</a></p>
+    <a href="/">New</a>
+</body>
+</html>
