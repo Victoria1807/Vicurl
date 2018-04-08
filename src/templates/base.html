@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vicurl | {% block title %} Shorten URL {% endblock title %}</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="http://getbootstrap.com/docs/3.3/examples/cover/cover.css" rel="stylesheet">
+    {% block styles %}
+    <style>
+        body {
+            background-color: #226268;
+            background-image: url("http://photoblog.org.ua/wp-content/uploads/2015/02/337002-svetik.jpg");
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+        
+        h1 {
+            font-weight: bold;
+        }
+        
+        .btn-link {
+            color: #00ffec;
+            font-size: 16px;
+            font-style: italic;
+            font-weight: bold;
+        }
+        
+        .btn-link:hover {
+            color: #daf900;
+        }
+        
+        p {
+            font-size: 16px;
+        }
+        
+        .errorlist {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .errorlist li {
+            color: #d4ff00;
+            font-size: 16px;
+            text-decoration: underline;
+            font-weight: bold;
+        }
+    </style>
+    {% endblock styles %}
+</head>
+<body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="inner cover">
+            {% block content %}
+            {% endblock content %}
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+</body>
+</html>

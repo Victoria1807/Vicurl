@@ -12,7 +12,7 @@ class HomeView(View):
     def get(self, request, *args, **kwargs):
         the_form = SubmitUrlForm()
         context = {
-            "title": "Submit URL",
+            "title": "Vicurl",
             "form": the_form
         }
         return render(request, "shortener/home.html", context)

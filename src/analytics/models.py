@@ -24,4 +24,4 @@ class ClickEvent(models.Model):
     objects = ClickEventManager()
 
     def __str__(self):
-        return "{i}".format(i=self.count)
+        return "{i} - {j}".format(i=self.count, j=self.short_url)
