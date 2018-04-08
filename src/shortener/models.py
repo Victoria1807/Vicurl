@@ -24,7 +24,6 @@ class ShortURLManager(models.Manager):
         new_codes = 0
         for q in qs:
             q.shortcode = create_shortcode(q)
-            print(q.id)
             q.save()
             new_codes += 1
         return "New codes made: {i}".format(i=new_codes)
