@@ -25,7 +25,7 @@ SECRET_KEY = 'x!g==abcapa!l&8@li0&y4d6+^-6lz*d1!z3i6$7(v-d&x10(p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.vicurl.com', 'vicurl.com', 'blog.vicurl.com']
+ALLOWED_HOSTS = ['www.vicurl.com', 'vicurl.com']
 
 
 # Application definition
