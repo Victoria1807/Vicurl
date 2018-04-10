@@ -99,3 +99,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# CUSTOM
+.DS_Store
+venv
+*.pyc
+staticfiles
+.env
+urlshortening/settings/local.py
