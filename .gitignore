@@ -106,4 +106,4 @@ venv
 *.pyc
 staticfiles
 .env
-urlshortening/settings/local.py
+db.sqlite3
