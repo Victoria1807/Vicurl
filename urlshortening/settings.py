@@ -13,7 +13,7 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 # Quick-start development settings - unsuitable for production
@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__fil
 SECRET_KEY = 'x!g==abcapa!l&8@li0&y4d6+^-6lz*d1!z3i6$7(v-d&x10(p'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['www.vicurl.com', 'vicurl.com', 'vicurl.herokuapp.com']
+ALLOWED_HOSTS = ['www.vicurl.com', 'vicurl.com', 'blog.vicurl.com']
 
 
 # Application definition
@@ -61,8 +61,8 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'urlshortening.urls'
 ROOT_HOSTCONF = 'urlshortening.hosts'
 DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = 'http://www.vicurl.com'
-PARENT_HOST = "vicurl.com:"
+DEFAULT_REDIRECT_URL = 'http://www.vicurl.com:8000'
+PARENT_HOST = "vicurl.com:8000"
 
 TEMPLATES = [
     {
