@@ -6,6 +6,7 @@ from analytics.models import ClickEvent
 
 from .forms import SubmitUrlForm
 from .models import ShortURL
+from urlshortening.settings import PORTAL_URL
 
 
 class HomeView(View):
@@ -21,7 +22,7 @@ class HomeView(View):
         form = SubmitUrlForm(request.POST)
         context = {
             "title": "Submit URL",
-            "form": form
+            "form": form,
         }
         template = "shortener/home.html"
         if form.is_valid():
@@ -30,6 +31,8 @@ class HomeView(View):
             context = {
                 "object": obj,
                 "created": created,
+                "portal_url": PORTAL_URL,
+                "red_link": PORTAL_URL + '/' + obj.shortcode + "/",
             }
             if created:
                 template = "shortener/success.html"

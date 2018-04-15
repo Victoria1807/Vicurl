@@ -25,7 +25,7 @@ SECRET_KEY = 'x!g==abcapa!l&8@li0&y4d6+^-6lz*d1!z3i6$7(v-d&x10(p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['www.vicurl.com', 'vicurl.com']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -38,16 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
-    #thirdy app
-    'django_hosts',
-
     # custom app
     'shortener',
     'analytics',
 ]
 
 MIDDLEWARE = [
-    'django_hosts.middleware.HostsRequestMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -55,11 +51,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'django_hosts.middleware.HostsResponseMiddleware',
 ]
 
 ROOT_URLCONF = 'urlshortening.urls'
-ROOT_HOSTCONF = 'urlshortening.hosts'
 DEFAULT_HOST = 'www'
 DEFAULT_REDIRECT_URL = 'http://www.vicurl.com:8000'
 PARENT_HOST = "vicurl.com:8000"
@@ -131,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+PORTAL_URL = 'http://localhost:8000'
 
 SHORTCODE_MAX = 15
 SHORTCODE_MIN = 6
