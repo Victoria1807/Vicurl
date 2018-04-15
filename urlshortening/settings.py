@@ -54,9 +54,6 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'urlshortening.urls'
-DEFAULT_HOST = 'www'
-DEFAULT_REDIRECT_URL = 'http://www.vicurl.com:8000'
-PARENT_HOST = "vicurl.com:8000"
 
 TEMPLATES = [
     {

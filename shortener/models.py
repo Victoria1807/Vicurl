@@ -1,9 +1,6 @@
 from django.conf import settings
 from django.db import models
 
-#from django.core.urlresolvers import reverse
-from django_hosts.resolvers import reverse
-
 from .validators import validate_url, validate_dot_com
 from .utils import code_generator, create_shortcode
 
